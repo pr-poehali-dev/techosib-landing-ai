@@ -9,17 +9,33 @@ interface ImageCarouselProps {
 
 export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageError, setImageError] = useState(false);
 
-  if (images.length === 0) return null;
+  if (images.length === 0) {
+    return (
+      <div className="relative w-full h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-t-lg overflow-hidden flex items-center justify-center">
+        <div className="text-center p-6">
+          <Icon name="Package" size={64} className="text-primary/30 mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground">{alt}</p>
+        </div>
+      </div>
+    );
+  }
 
   if (images.length === 1) {
     return (
-      <div className="relative w-full h-64 bg-gray-100 rounded-lg overflow-hidden">
+      <div className="relative w-full h-64 bg-gray-100 rounded-t-lg overflow-hidden">
         <img 
           src={images[0]} 
           alt={alt} 
           className="w-full h-full object-cover"
+          onError={() => setImageError(true)}
         />
+        {imageError && (
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+            <Icon name="ImageOff" size={48} className="text-muted-foreground/50" />
+          </div>
+        )}
       </div>
     );
   }
@@ -37,12 +53,18 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   };
 
   return (
-    <div className="relative w-full h-64 bg-gray-100 rounded-lg overflow-hidden group">
+    <div className="relative w-full h-64 bg-gray-100 rounded-t-lg overflow-hidden group">
       <img 
         src={images[currentIndex]} 
         alt={`${alt} - ${currentIndex + 1}`} 
         className="w-full h-full object-cover transition-all duration-300"
+        onError={() => setImageError(true)}
       />
+      {imageError && (
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+          <Icon name="ImageOff" size={48} className="text-muted-foreground/50" />
+        </div>
+      )}
       
       {images.length > 1 && (
         <>
