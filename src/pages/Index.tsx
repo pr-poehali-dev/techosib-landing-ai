@@ -11,23 +11,37 @@ import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 import ImageCarousel from '@/components/ImageCarousel';
 
-const CDN_BASE = 'https://cdn.poehali.dev/projects/YCAJEKPI_wLGVUAtPHIm5BUcb/bucket';
-
-const generateImageUrls = (folderName: string, filePrefix: string, count: number) => {
-  return Array.from({ length: count }, (_, i) => 
-    `${CDN_BASE}/${folderName}/${filePrefix}-${i + 1}.jpg`
-  );
-};
-
 const modelImages: Record<string, string[]> = {
-  'TS3000MP-H': generateImageUrls('TS-3000MR-H', 'TS-3000MR-H', 20),
-  'TS3000SP-H': generateImageUrls('TS-3000SPS-H', 'TS-3000SPS-H', 12),
-  'TS3000MP-TP': generateImageUrls('TS3000MR-TP', 'TS3000MR-TP', 1),
-  'TS3000SP-TP': generateImageUrls('TS-3000SPS-TP', 'TS-3000SPS-TP', 19),
-  'TS3000MP-MT': generateImageUrls('TS3000MR-MT', 'TS3000MR-MT', 1),
-  'TS3000SP-MT': generateImageUrls('TS3000SPS-MT', 'TS3000SPS-MT', 11),
-  'TS3000MP-MT-TP': generateImageUrls('TS3000MR-MT-TP', 'TS3000MR-MT-TP', 1),
-  'TS3000SP-MT-TP': generateImageUrls('TS3000SPS-MT-TP', 'TS3000SPS-MT-TP', 1)
+  'TS3000MP-H': [
+    'https://cdn.poehali.dev/files/TS-3000MR-H.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-1.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-2.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-3.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-4.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-5.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-6.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-7.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-8.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-9.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-10.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-11.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-12.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-13.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-14.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-15.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-16.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-17.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-18.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-19.jpg',
+    'https://cdn.poehali.dev/files/TS-3000MR-H-20.jpg'
+  ],
+  'TS3000SP-H': [],
+  'TS3000MP-TP': [],
+  'TS3000SP-TP': [],
+  'TS3000MP-MT': [],
+  'TS3000SP-MT': [],
+  'TS3000MP-MT-TP': [],
+  'TS3000SP-MT-TP': []
 };
 
 const models = [
