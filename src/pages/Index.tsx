@@ -364,7 +364,7 @@ const faqItems = [
   },
   {
     question: "Входит ли доставка в стоимость?",
-    answer: "Доставка рассчитывается отдельно в зависимости от региона. По Москве и области доставка обычно составляет 3-5 тысяч рублей. В регионы - по тарифам транспортных компаний."
+    answer: "Доставка рассчитывается отдельно в зависимости от региона."
   },
   {
     question: "Предоставляете ли вы гарантию?",
@@ -372,7 +372,7 @@ const faqItems = [
   },
   {
     question: "Нужна ли специальная подготовка для работы?",
-    answer: "Нет, управление паллетообмотчиком интуитивно понятно. При доставке наш специалист проведет инструктаж и покажет все функции оборудования. Также прилагается подробная инструкция на русском языке."
+    answer: "Нет, управление паллетообмотчиком интуитивно понятно. При доставке наш специалист проведет инструктаж и покажет все функции оборудования."
   },
   {
     question: "Какой расход стретч-пленки?",
@@ -385,6 +385,10 @@ const faqItems = [
   {
     question: "Возможна ли рассрочка или лизинг?",
     answer: "Да, мы работаем с ведущими лизинговыми компаниями. Также возможна рассрочка платежа от производителя. Свяжитесь с нами для расчета индивидуальных условий."
+  },
+  {
+    question: "Кто вы и где находитесь?",
+    answer: "Компания Техно-Сиб основана в 2001 году. Мы специализируемся на поставках и сервисном обслуживании профессионального пищевого и фасовочно-упаковочного оборудования, а также обеспечении упаковочными и расходными материалами. Наши склады находятся в городах Москва и Новосибирск. Доставку оборудования мы делаем по всей России."
   }
 ];
 
@@ -505,12 +509,12 @@ export default function Index() {
               От {minPrice} руб
             </p>
             <div className="flex flex-wrap gap-6 pt-6 justify-center">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-xl px-10 py-6" onClick={() => scrollToSection('models')}>
-                <Icon name="Package" size={24} className="mr-2" />
+              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-2xl px-14 py-8" onClick={() => scrollToSection('models')}>
+                <Icon name="Package" size={28} className="mr-2" />
                 Выбрать модель
               </Button>
-              <Button size="lg" variant="outline" className="text-xl px-10 py-6" onClick={() => setDialogOpen(true)}>
-                <Icon name="Phone" size={24} className="mr-2" />
+              <Button size="lg" variant="outline" className="text-2xl px-14 py-8 border-2" onClick={() => setDialogOpen(true)}>
+                <Icon name="Phone" size={28} className="mr-2" />
                 Получить КП
               </Button>
             </div>
@@ -518,30 +522,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section id="use-cases" className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Где применяются паллетообмотчики
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, idx) => (
-              <Card key={idx} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <Icon name={useCase.icon as any} size={32} className="text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold">{useCase.title}</h3>
-                  <p className="text-sm text-muted-foreground">{useCase.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Advantages Section */}
-      <section id="advantages" className="py-16 bg-gray-50">
+      <section id="advantages" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Преимущества оборудования ТЕХНОСИБ
@@ -553,8 +535,8 @@ export default function Index() {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Icon name={advantage.icon as any} size={24} className="text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold">{advantage.title}</h3>
-                  <p className="text-muted-foreground">{advantage.description}</p>
+                  <h3 className="text-2xl font-semibold">{advantage.title}</h3>
+                  <p className="text-lg text-muted-foreground">{advantage.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -576,23 +558,23 @@ export default function Index() {
               <Card key={model.id} className="hover:shadow-xl transition-shadow flex flex-col">
                 <ImageCarousel images={model.images} alt={model.name} inStock={model.inStock} />
                 <CardHeader>
-                  <CardTitle className="text-xl">{model.name}</CardTitle>
-                  <CardDescription className="text-2xl font-bold text-secondary">
+                  <CardTitle className="text-2xl">{model.name}</CardTitle>
+                  <CardDescription className="text-3xl font-bold text-secondary">
                     {getPrice(model.name)} руб
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
-                  <p className="text-sm text-muted-foreground mb-4">{model.description}</p>
+                  <p className="text-base text-muted-foreground mb-4">{model.description}</p>
                   <ul className="space-y-2 mb-6 flex-1">
                     {model.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm">
-                        <Icon name="Check" size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                      <li key={idx} className="flex items-start gap-2 text-base">
+                        <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button 
-                    className="w-full bg-secondary hover:bg-secondary/90" 
+                    className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6" 
                     onClick={() => openModelDialog(model.name)}
                   >
                     Получить КП
@@ -890,6 +872,28 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section id="use-cases" className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Где применяются паллетообмотчики
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, idx) => (
+              <Card key={idx} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Icon name={useCase.icon as any} size={32} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold">{useCase.title}</h3>
+                  <p className="text-base text-muted-foreground">{useCase.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -928,8 +932,8 @@ export default function Index() {
                 <CardContent className="p-6 space-y-3">
                   <Icon name="Phone" size={32} className="mx-auto" />
                   <h3 className="text-xl font-semibold">Позвоните нам</h3>
-                  <a href="tel:+7" className="text-2xl font-bold block hover:text-secondary transition-colors">
-                    +7 (___) ___-__-__
+                  <a href="tel:88005004054" className="text-2xl font-bold block hover:text-secondary transition-colors">
+                    8-800-500-40-54
                   </a>
                   <p className="text-sm text-white/80">Пн-Пт: 9:00 - 18:00</p>
                 </CardContent>
@@ -938,8 +942,8 @@ export default function Index() {
                 <CardContent className="p-6 space-y-3">
                   <Icon name="Mail" size={32} className="mx-auto" />
                   <h3 className="text-xl font-semibold">Напишите нам</h3>
-                  <a href="mailto:info@technosib.ru" className="text-xl font-semibold block hover:text-secondary transition-colors">
-                    info@technosib.ru
+                  <a href="mailto:info5@t-sib.ru" className="text-xl font-semibold block hover:text-secondary transition-colors">
+                    info5@t-sib.ru
                   </a>
                   <p className="text-sm text-white/80">Ответим в течение часа</p>
                 </CardContent>

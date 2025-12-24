@@ -31,7 +31,7 @@ export default function Header({
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="h-12" />
+            <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="h-8" />
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
@@ -44,7 +44,7 @@ export default function Header({
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+7" className="text-lg font-semibold text-primary hover:text-secondary transition-colors">+7 (___) ___-__-__</a>
+            <a href="tel:88005004054" className="text-lg font-semibold text-primary hover:text-secondary transition-colors">8-800-500-40-54</a>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
                 <Button className="bg-secondary hover:bg-secondary/90">Получить КП</Button>
@@ -97,7 +97,7 @@ export default function Header({
             <button onClick={() => scrollToSection('service')} className="block w-full text-left py-2 text-sm font-semibold hover:text-primary transition-colors">Сервис</button>
             <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 text-sm font-semibold hover:text-primary transition-colors">FAQ</button>
             <button onClick={() => scrollToSection('contacts')} className="block w-full text-left py-2 text-sm font-semibold hover:text-primary transition-colors">Контакты</button>
-            <a href="tel:+7" className="block py-2 text-lg font-semibold text-primary">+7 (___) ___-__-__</a>
+            <a href="tel:88005004054" className="block py-2 text-lg font-semibold text-primary">8-800-500-40-54</a>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
                 <Button className="w-full bg-secondary hover:bg-secondary/90">Получить КП</Button>
