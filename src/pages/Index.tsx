@@ -129,7 +129,27 @@ const models: Model[] = [
       turntableSpeed: "4-12 об/мин",
       weight: "540 кг"
     },
-    images: ["https://cdn.poehali.dev/files/TS-3000SPS-TP.jpg"]
+    images: [
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-1.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-2.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-3.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-4.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-5.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-6.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-7.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-8.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-9.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-10.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-11.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-12.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-13.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-14.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-15.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-16.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-17.jpg",
+      "https://cdn.poehali.dev/files/TS-3000SPS-TP-18.jpg"
+    ]
   },
   {
     id: "ts3000mr-mt",
