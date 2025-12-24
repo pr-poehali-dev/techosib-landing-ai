@@ -110,8 +110,7 @@ const models: Model[] = [
       weight: "520 кг"
     },
     images: [
-      "https://cdn.poehali.dev/files/TS-3000MR-TP.jpg",
-      "https://cdn.poehali.dev/files/TS3000MR-MT.jpg"
+      "https://cdn.poehali.dev/files/TS3000MR-TP.jpg"
     ],
     inStock: false
   },
