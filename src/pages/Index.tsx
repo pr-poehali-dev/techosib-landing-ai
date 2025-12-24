@@ -480,8 +480,12 @@ export default function Index() {
       <section className="pt-24 pb-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative lg:order-1 h-[500px]">
-              <MachineCollage />
+            <div className="relative lg:order-1">
+              <img 
+                src="https://cdn.poehali.dev/files/баннер.jpg" 
+                alt="Паллетообмотчики ТЕХНОСИБ" 
+                className="w-full rounded-2xl shadow-2xl"
+              />
             </div>
             
             <div className="space-y-6 lg:order-2">
