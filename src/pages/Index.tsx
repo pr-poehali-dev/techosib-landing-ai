@@ -498,7 +498,7 @@ export default function Index() {
         <div className="container mx-auto px-4 relative z-10 w-full">
           <div className="max-w-5xl mx-auto text-center space-y-4 md:space-y-8">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 leading-tight">
-              <span className="font-serif italic">Паллетообмотчики</span> <span className="inline-block">
+              <span className="font-serif">Паллетообмотчики</span> <span className="inline-block">
                 <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="inline-block h-8 sm:h-10 md:h-16 lg:h-20 xl:h-24 align-middle" />
               </span>
             </h1>
