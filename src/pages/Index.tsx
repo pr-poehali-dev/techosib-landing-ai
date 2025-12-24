@@ -683,6 +683,26 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Посмотрите видео о нашем оборудовании
+            </h2>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://rutube.ru/play/embed/36ca1c58ba9d91e41a902101aefb239a"
+                frameBorder="0"
+                allow="clipboard-write; autoplay"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Selection Quiz Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
