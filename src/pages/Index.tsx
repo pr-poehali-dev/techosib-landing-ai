@@ -161,6 +161,7 @@ const models: Model[] = [
   {
     id: "ts3000mr-mt",
     name: "TS3000MR-MT",
+    inStock: false,
     price: "420 000",
     description: "Модель с увеличенной мачтой для упаковки высоких паллет до 3000 мм.",
     features: [
@@ -220,6 +221,7 @@ const models: Model[] = [
   {
     id: "ts3000mr-mt-tp",
     name: "TS3000MR-MT-TP",
+    inStock: false,
     price: "500 000",
     description: "Максимальная комплектация с увеличенной мачтой и верхним прижимом.",
     features: [
@@ -245,6 +247,7 @@ const models: Model[] = [
   {
     id: "ts3000sps-mt-tp",
     name: "TS3000SPS-MT-TP",
+    inStock: false,
     price: "550 000",
     description: "Топовая модель с полной автоматизацией, увеличенной мачтой и верхним прижимом.",
     features: [
