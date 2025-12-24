@@ -496,25 +496,25 @@ export default function Index() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
         <div className="container mx-auto px-4 relative z-10 w-full">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 leading-tight">
-              Паллетообмотчики <span className="inline-block">
-                <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="inline-block h-12 md:h-16 lg:h-20 xl:h-24 align-middle" />
+          <div className="max-w-5xl mx-auto text-center space-y-4 md:space-y-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 leading-tight">
+              <span className="font-serif italic">Паллетообмотчики</span> <span className="inline-block">
+                <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="inline-block h-8 sm:h-10 md:h-16 lg:h-20 xl:h-24 align-middle" />
               </span>
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-gray-700 font-semibold">
+            <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-gray-700 font-semibold px-2">
               Надежное оборудование по доступной цене
             </p>
-            <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary">
+            <p className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-secondary">
               От {minPrice} руб
             </p>
-            <div className="flex flex-wrap gap-6 pt-6 justify-center">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-2xl px-14 py-8" onClick={() => scrollToSection('models')}>
-                <Icon name="Package" size={28} className="mr-2" />
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 pt-4 md:pt-6 justify-center px-2">
+              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-14 py-6 md:py-8 w-full sm:w-auto" onClick={() => scrollToSection('models')}>
+                <Icon name="Package" size={24} className="mr-2" />
                 Выбрать модель
               </Button>
-              <Button size="lg" variant="outline" className="text-2xl px-14 py-8 border-2" onClick={() => setDialogOpen(true)}>
-                <Icon name="Phone" size={28} className="mr-2" />
+              <Button size="lg" variant="outline" className="text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-14 py-6 md:py-8 border-2 w-full sm:w-auto" onClick={() => setDialogOpen(true)}>
+                <Icon name="Phone" size={24} className="mr-2" />
                 Получить КП
               </Button>
             </div>
@@ -964,9 +964,9 @@ export default function Index() {
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
-            <div className="text-2xl font-bold text-primary">ТЕХНОСИБ</div>
+            <img src="https://cdn.poehali.dev/files/ЛОГО_ТСг.jpg" alt="ТЕХНОСИБ" className="h-16 mx-auto" />
             <p className="text-gray-400">Надежное упаковочное оборудование для вашего бизнеса</p>
-            <div className="flex justify-center gap-8 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-gray-400">
               <button onClick={() => scrollToSection('models')} className="hover:text-white transition-colors">Модели</button>
               <button onClick={() => scrollToSection('advantages')} className="hover:text-white transition-colors">Преимущества</button>
               <button onClick={() => scrollToSection('service')} className="hover:text-white transition-colors">Сервис</button>
