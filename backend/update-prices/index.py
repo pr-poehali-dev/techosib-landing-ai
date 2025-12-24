@@ -37,13 +37,13 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     
     model_mapping = {
         '6323': 'TS3000MR-H',
-        '6324': 'TS3000SPS-H',
-        '6325': 'TS3000MR-TP',
-        '6326': 'TS3000SPS-TP',
-        '6327': 'TS3000MR-MT',
-        '6328': 'TS3000SPS-MT',
-        '6329': 'TS3000MR-MT-TP',
-        '6330': 'TS3000SPS-MT-TP'
+        '6366': 'TS3000SPS-H',
+        '6373': 'TS3000MR-TP',
+        '6324': 'TS3000SPS-TP',
+        '6368': 'TS3000MR-MT',
+        '6367': 'TS3000SPS-MT',
+        '6369': 'TS3000MR-MT-TP',
+        '6370': 'TS3000SPS-MT-TP'
     }
     
     prices = {}
