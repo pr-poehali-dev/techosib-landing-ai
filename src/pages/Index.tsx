@@ -263,7 +263,7 @@ const models: Model[] = [
       turntableSpeed: "4-12 об/мин",
       weight: "640 кг"
     },
-    images: ["https://cdn.poehali.dev/files/TS-3000SPS-MT-TP.jpg"]
+    images: ["https://cdn.poehali.dev/files/1.jpg"]
   }
 ];
 
