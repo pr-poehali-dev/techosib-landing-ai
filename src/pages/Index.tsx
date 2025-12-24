@@ -478,11 +478,11 @@ export default function Index() {
 
       {/* Hero Section */}
       <section 
-        className="relative pt-24 pb-16 bg-cover bg-center bg-no-repeat"
+        className="relative pt-24 pb-16 bg-contain bg-center bg-no-repeat min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center"
         style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/баннер.jpg)' }}
       >
-        <div className="absolute inset-0 bg-white/80"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
+        <div className="container mx-auto px-4 relative z-10 w-full">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Паллетообмотчики <span className="text-primary uppercase tracking-wider font-bold">ТЕХНОСИБ</span>
