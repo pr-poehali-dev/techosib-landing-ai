@@ -30,7 +30,9 @@ export default function Header({
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-primary">ТЕХНОСИБ</div>
+          <div className="flex items-center gap-3">
+            <img src="https://cdn.poehali.dev/files/Лого ТСГ.jpg" alt="ТЕХНОСИБ" className="h-10" />
+          </div>
           
           <nav className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection('models')} className="text-sm font-semibold hover:text-primary transition-colors">Модели</button>
