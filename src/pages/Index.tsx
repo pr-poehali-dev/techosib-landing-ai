@@ -30,6 +30,7 @@ interface Model {
     weight: string;
   };
   images: string[];
+  inStock?: boolean;
 }
 
 // All 8 models
@@ -37,6 +38,7 @@ const models: Model[] = [
   {
     id: "ts3000mr-h",
     name: "TS3000MR-H",
+    inStock: true,
     price: "300 000",
     description: "Базовая модель с ручным креплением пленки. Идеальна для небольших складов и производств.",
     features: [
@@ -60,6 +62,7 @@ const models: Model[] = [
   {
     id: "ts3000sps-h",
     name: "TS3000SPS-H",
+    inStock: true,
     price: "350 000",
     description: "Модель с автоматической подачей и обрезкой пленки. Повышенная производительность.",
     features: [
@@ -106,11 +109,16 @@ const models: Model[] = [
       turntableSpeed: "4-12 об/мин",
       weight: "520 кг"
     },
-    images: ["https://cdn.poehali.dev/files/TS-3000MR-TP.jpg"]
+    images: [
+      "https://cdn.poehali.dev/files/TS-3000MR-TP.jpg",
+      "https://cdn.poehali.dev/files/TS3000MR-MT.jpg"
+    ],
+    inStock: false
   },
   {
     id: "ts3000sps-tp",
     name: "TS3000SPS-TP",
+    inStock: true,
     price: "430 000",
     description: "Автоматическая модель с верхним прижимом. Максимальная надежность упаковки.",
     features: [
@@ -177,6 +185,7 @@ const models: Model[] = [
   {
     id: "ts3000sps-mt",
     name: "TS3000SPS-MT",
+    inStock: true,
     price: "470 000",
     description: "Автоматическая модель с увеличенной мачтой. Для высоких грузов с полной автоматизацией.",
     features: [
@@ -523,7 +532,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {models.map((model) => (
               <Card key={model.id} className="hover:shadow-xl transition-shadow flex flex-col">
-                <ImageCarousel images={model.images} alt={model.name} />
+                <ImageCarousel images={model.images} alt={model.name} inStock={model.inStock} />
                 <CardHeader>
                   <CardTitle className="text-xl">{model.name}</CardTitle>
                   <CardDescription className="text-2xl font-bold text-secondary">

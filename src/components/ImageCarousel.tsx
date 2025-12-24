@@ -5,9 +5,10 @@ import Icon from '@/components/ui/icon';
 interface ImageCarouselProps {
   images: string[];
   alt: string;
+  inStock?: boolean;
 }
 
-export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
+export default function ImageCarousel({ images, alt, inStock }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageError, setImageError] = useState(false);
 
@@ -34,6 +35,15 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
         {imageError && (
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
             <Icon name="ImageOff" size={48} className="text-muted-foreground/50" />
+          </div>
+        )}
+        {inStock !== undefined && (
+          <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold shadow-lg ${
+            inStock 
+              ? 'bg-green-500 text-white' 
+              : 'bg-orange-500 text-white'
+          }`}>
+            {inStock ? 'В наличии' : 'Под заказ'}
           </div>
         )}
       </div>
@@ -66,6 +76,16 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
         </div>
       )}
       
+      {inStock !== undefined && (
+        <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold shadow-lg ${
+          inStock 
+            ? 'bg-green-500 text-white' 
+            : 'bg-orange-500 text-white'
+        }`}>
+          {inStock ? 'В наличии' : 'Под заказ'}
+        </div>
+      )}
+
       {images.length > 1 && (
         <>
           <Button
